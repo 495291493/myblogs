@@ -20,20 +20,34 @@
   </div>
   <script>
     window.$docsify = {
+      name: '<span>自定义docsify</span>',
+      formatUpdated: '{MM}/{DD} {HH}:{mm}',
       auto2top: true,
       loadNavbar: true,
       search: 'auto', // 默认值
       loadSidebar: true,
+      autoHeader: true,
+      mergeNavbar: true,
       coverpage: true,
       disqus: 'shortname',
       subMaxLevel: 2,
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
+      },
+      formatUpdated: function (time) {
+        return time;
+      },
+      count: {
+        countable: true,
+        fontsize: '0.9em',
+        color: 'rgb(90,90,90)',
+        language: 'chinese'
       }
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
 </body>
 
 </html>
